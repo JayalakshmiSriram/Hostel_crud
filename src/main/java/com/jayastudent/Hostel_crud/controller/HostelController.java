@@ -16,7 +16,7 @@ public class HostelController {
     @Autowired
     @Lazy
     private RestTemplate restTemplate;
-    static final String STUDENT_URL_MS = "http://localhost:8090/";
+    static final String STUDENT_URL_MS = "http://springboot-mysql-docker:8090/";
 
 
     @GetMapping("/find/{roll}")
