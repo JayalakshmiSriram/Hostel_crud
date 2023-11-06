@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hostel-test-service
+spec:
+  selector:
+    app.kubernetes.io/name: hostel-deployment
+  ports:
+    - protocol: "TCP"
+      port: 8091
+      targetPort: 8092
+
+  type: NodePort

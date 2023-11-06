@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hostel-deployment
+  labels:
+    app: hostel-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hostel-deployment
+  template:
+    metadata:
+      labels:
+        app: hostel-deployment
+    spec:
+      containers:
+        - name: hostel-deployment
+          image: hostel-mysql-docker
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 91
